@@ -52,5 +52,18 @@ function actulizaListaDeAmigos() {
         listaAmigos.appendChild( listItemAmigo );
     }
 
+}
+
+function sortearAmigo() {
+
+    // Siempre y cuando la lista de amigos contenga elementos
+    if ( nombres.length > 0 ) {
+        // Obtenemos un indice aleatorio, el cual sera nuestro amigo secreto.
+        // Dentro del rango 0..numero de elementos en el arreglo de nombres
+        indice = Math.floor( Math.random() * nombres.length );
+
+        // Mostramos el amigo secreto
+        document.getElementById( "resultado" ).innerHTML = nombres[ indice ];
+    }
 
 }
