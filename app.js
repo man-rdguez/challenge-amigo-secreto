@@ -25,6 +25,9 @@ function agregarAmigo() {
         // no sea necesario borrar el nombre anterior manualmente
         amigo.value = '';
 
+        // En caso de haberse generado previamente un amigo secreto, limpiamos el nombre mostrado
+        document.getElementById( "resultado" ).innerHTML = "";
+
         // Actualizamos la lista de amigos que se mostrara debajo del cuadro de texto
         actulizaListaDeAmigos()
     }
@@ -32,12 +35,8 @@ function agregarAmigo() {
 }
 
 function actulizaListaDeAmigos() {
-
-    // Obtenemos el elemento correspondiente a la lista que mostrará los amigos
-    let listaAmigos  = document.getElementById('listaAmigos' );
-
     // Limpiamos la lista de amigos
-    listaAmigos.innerHTML = '';
+    limpiaListaDeAmigos();
 
     // Iteramos sobre el arreglo que contiene los nombres de los amigos
     for ( const nombre of nombres ) {
@@ -54,7 +53,18 @@ function actulizaListaDeAmigos() {
 
 }
 
+function limpiaListaDeAmigos() {
+    // Obtenemos el elemento correspondiente a la lista que mostrará los amigos
+    let listaAmigos  = document.getElementById('listaAmigos' );
+
+    // Limpiamos la lista de amigos
+    listaAmigos.innerHTML = '';
+}
+
 function sortearAmigo() {
+
+    // Limpiamos la lista de amigos, previo a mostrar el amigo secreto
+    limpiaListaDeAmigos();
 
     // Siempre y cuando la lista de amigos contenga elementos
     if ( nombres.length > 0 ) {
