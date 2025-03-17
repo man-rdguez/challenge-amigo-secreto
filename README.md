@@ -32,4 +32,7 @@
 - Dirígete a tu repositorio en GitHub
 - Da click en la pestaña de "Settings"
 - Avanza hacia abajo en la página, hasta la sección de "Pages" que se encuentra del lado izquierdo y da click en el
-- Puedes visitar tu sitio web navegando a https://your-username.github.io/ en tu navegador web. Es posible que los cambios tarden unos minutos en propagarse y que se pueda acceder a tu sitio web.
+- Arriba, en la parte de "Source", asegurate que se encuentre seleccionada la opción "Deploy from a branch" 
+- En la parte de Branch, indicar el branch de donde se hara el deploy, en nuestro caso "main", ya que no generamos otra rama o branch y dar click en save
+- Refrescar la página o presionar F5
+- En la parte superior aparecerá el link para acceder a nuestra aplicación "Your site is live at https://tu-nombre-de-usuario.github.io/challenge-amigo-secreto/", dar click en el boton que aparece a la derecha "Visit site" 
